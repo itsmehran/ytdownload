@@ -4,7 +4,7 @@ var dataWidget = document.querySelector('.dataWidget');
 var suggestionWidget = document.querySelector('.dropdown-content');
 var videoWidget = document.querySelector('.videoWidget');
 // const baseURL = 'file:///home/stanlee/Documents/yt/dist/';
-const baseURL = 'https://ytconvertor.com/';
+const baseURL = 'https://itsmehran.github.io/ytdownload/';
 const apiKey = 'AIzaSyDcqNz1O2jdac8u7VaJAron5zhdxuydmxk';
 
 convertBtn.addEventListener('click', e => {
@@ -20,7 +20,7 @@ function sendURL(URL) {
  isLoading.innerHTML =
   '<span style="padding-bottom:8px;"> Processing the link to download audio. Stay on the page...</span>';
  dataWidget.appendChild(isLoading);
- fetch(`https://ytconvertor.com/.netlify/functions/api/mp3Info?URL=${URL}`)
+ fetch(`https://itsmehran.github.io/ytdownload/.netlify/functions/api/mp3Info?URL=${URL}`)
   .then(res => res.json())
   .then(json => {
    dataWidget.innerHTML = null;
